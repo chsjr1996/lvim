@@ -7,7 +7,7 @@ linters.setup {
       "javascript",
       "typescriptreact",
       "typescript",
-      "vue",
+      -- "vue",
     },
   },
 }

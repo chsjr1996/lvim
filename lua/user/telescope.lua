@@ -1,8 +1,21 @@
-local previewers = require "telescope.previewers"
-lvim.builtin.telescope.file_previewer = previewers.vim_buffer_cat.new
--- lvim.builtin.telescope.defaults.preview.treesitter = false
--- lvim.builtin.telescope.defaults = {
---   preview = {
---     treesitter = false
---   }
--- }
+lvim.builtin.telescope = {
+  active = true,
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+      hidden = false,
+      previewer = false,
+    },
+  },
+  extensions = {
+    file_browser = {
+      theme = "dropdown",
+      hidden = false,
+      previewer = false,
+    }
+  },
+  on_config_done = function (telescope)
+    pcall(telescope.load_extension, "file_browser")
+  end,
+}
+

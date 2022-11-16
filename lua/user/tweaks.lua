@@ -1,4 +1,4 @@
-lvim.transparent_window = true
+lvim.transparent_window = false
 
 vim.opt.relativenumber = true
 vim.opt.timeoutlen = 500
@@ -7,6 +7,5 @@ vim.opt.laststatus = 0
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0
 vim.opt.showmode = true
-
-vim.lsp.buf.formatting_sync(nil, 1000)
+vim.opt.guifont = "JetBrains Mono:h14"
 

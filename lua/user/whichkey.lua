@@ -1,7 +1,22 @@
 lvim.builtin.which_key.mappings["u"] = {
   name = "+UI",
   h = { "<cmd>lua require('user.zen').hide_ui()<CR>", "Hide UI" },
-  s = { "<cmd>lua require('user.zen').show_ui()<CR>", "Show UI" }
+  s = { "<cmd>lua require('user.zen').show_ui()<CR>", "Show UI" },
+  z = { "<cmd>:TZAtaraxis<CR>", "Toggle True Zen" }
+}
+
+lvim.builtin.which_key.mappings['<space>'] = {
+  name = "Motion",
+  s = { "<cmd>:HopChar1<CR>", "Hop char 1" },
+  S = { "<cmd>:HopChar2<CR>", "Hop char 2" },
+  w = { "<cmd>:HopWord<CR>", "Hop word" },
+}
+
+lvim.builtin.which_key.vmappings['<space>'] = {
+  name = "Motion",
+  s = { "<cmd>:HopChar1<CR>", "Hop char 1" },
+  S = { "<cmd>:HopChar2<CR>", "Hop char 2" },
+  w = { "<cmd>:HopWord<CR>", "Hop word" },
 }
 
 -- Use which-key to add extra bindings with the leader-key prefix
