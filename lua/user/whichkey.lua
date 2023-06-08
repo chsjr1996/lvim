@@ -19,6 +19,18 @@ lvim.builtin.which_key.vmappings['<space>'] = {
   w = { "<cmd>:HopWord<CR>", "Hop word" },
 }
 
+lvim.builtin.which_key.mappings["l"]["f"] = {
+  function()
+    require("lvim.lsp.utils").format { timeout_ms = 2000 }
+  end,
+  "LSP format",
+}
+
+lvim.builtin.which_key.mappings["l"]["D"] = {
+  "<cmd>Telescope lsp_definitions<CR>",
+  "Telescope go definition"
+}
+
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {

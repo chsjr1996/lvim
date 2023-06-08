@@ -6,6 +6,12 @@ lvim.builtin.telescope = {
       hidden = false,
       previewer = false,
     },
+    lsp_definitions = {
+      file_ignore_patterns = { "index.d.ts" },
+    },
+    buffers = {
+      sort_lastused = true,
+    },
   },
   extensions = {
     file_browser = {
